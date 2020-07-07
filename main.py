@@ -38,8 +38,7 @@ class Mbf:
 				url = self.url+next
 			else: break
 
-	def run_tools(self):
-		logo.banner()
+	def run_tools(self)
 		kuki = input('\nCookie : ')
 		login = parser(requests.get(self.url+'/me',
 			headers={'Cookie': kuki}).text, 'html.parser').title.text.replace(' | Facebook','')
@@ -62,10 +61,3 @@ class Mbf:
 			pwd = input('[•] Extra Password : ')
 			crack.crackers(self.member, pwd, kuki)
 		else: exit()
-
-
-def run_mbf():
-	run = Mbf()
-	run.run_tools()
-
-run_mbf()
