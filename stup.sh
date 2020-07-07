@@ -9,6 +9,6 @@ pkg install python -y
 pkg install python
 pkg install git 
 pip install requests bs4
-cd multi_fb1
+cd multi_fb2
 python3  -m pip install requests bs4
 python3 main.py
