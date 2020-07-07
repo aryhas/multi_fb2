@@ -38,7 +38,6 @@ class Mbf:
 				url = self.url+next
 			else: break
 
-	def run_tools()
 		kuki = input('\nCookie : ')
 		login = parser(requests.get(self.url+'/me',
 			headers={'Cookie': kuki}).text, 'html.parser').title.text.replace(' | Facebook','')
