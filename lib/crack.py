@@ -26,11 +26,7 @@ def crackers(username, password, cookie):
 		else:
 			print('\nresult saved on lib/result.txt')
 	except requests.exceptions.ConnectionError: pass
-        try:
-                f = open('lib/result.txt','w')
-                a = 0
-                for user in username:
-                        a+=1
+
                         data = {'email': user,
                                 'pass': password,
                                 'submit': 'login'
