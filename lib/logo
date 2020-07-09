@@ -1,4 +1,6 @@
 import os
+from bs4 import BeautifulSoup as parser
+
 w = '\x1b[1;37m'
 b = '\x1b[1;36m'
 g = '\x1b[1;32m'
