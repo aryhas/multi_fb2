@@ -11,6 +11,6 @@ def banner():
 ║║║│ ││  │ │───╠╩╗╠╣
 ╩ ╩└─┘┴─┘┴ ┴   ╚═╝╚{r} v0.2
 {b}╔═════════════════════════════════════════╗
-{b}║{y}*{g} Author{w} :{g} UPIL KOCLOK             {b}       ║
+{b}║{y}*{g} Author{w} :{g} UPIL KOCLOK             {b}      ║
 {b}║{y}*{b} Github{w} :{b} \x1b[4mhttps://github.com/aryhas\x1b[0m{b}     ║
 {b}╚═════════════════════════════════════════╝ ''')
