@@ -10,4 +10,4 @@ pkg install python
 pkg install git 
 pip install requests bs4
 python3  -m pip install requests bs4
-python3 upil.py
+python3 sans.py
