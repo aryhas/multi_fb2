@@ -1,4 +1,3 @@
 # Multi Brute Force
-• Picture
 
 
