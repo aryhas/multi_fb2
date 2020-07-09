@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# coded by aryhas
+
 import os
 import re 
 import time
