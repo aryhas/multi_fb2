@@ -11,6 +11,8 @@ import os
 import time
 import random
 import requests
+from lib import logo
+from lib import crack
 from bs4 import BeautifulSoup as parser
 
 g = '\x1b[1;32m'
