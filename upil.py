@@ -16,7 +16,7 @@ global die,check,result, count
 id = []
 die = 0
 chek = []
-life = []
+succes = []
 count = 0
 check = 0
 result = 0
@@ -32,7 +32,7 @@ def masuk():
         try:
                 cek = open("cookies").read()
         except FileNotFoundError:
-                cek = input("[\033[1;32m>\033[0m Enter Cookie : ")
+                cek = input("[\033[1;32m>\033[0m ENTER COOKIE >>>> ")
         cek = {"cookie":cek}
         ismi = ses.get(mbasic.format("/me",verify=False),cookies=cek).content
         if "mbasic_logout_button" in str(ismi):
@@ -158,14 +158,15 @@ if __name__ == '__main__':
                 kukis = masuk()
                 kuki = {'cookie':kukis}
                 os.system("clear")
+                logo.banner()
                 print('\n\n\t\t≺ \033[1;36mFACEBOOK TOOLKIT\033[0m ≻\n\n')
-                print('\033[1;91m👉 \033[0m[\033[1;32m1\033[0m] List friends')
-                print('\033[1;91m👉 \033[0m [\033[1;32m2\033[0m] Crack From Likes\033[1;91m ')
+                print('\033[1;91m👉 \033[0m[\033[1;32m1\033[0m] LIST FRIENDS')
+                print('\033[1;91m👉 \033[0m [\033[1;32m2\033[0m] CRACK FROM LIKES\033[1;91m ')
                 print('👉 \033[0m[\033[1;32m3\033[0m] Crack From Search Name')
-                print('\033[1;91m👉 \033[0m[\033[1;32m4\033[0m] Crack From group ')
-                print('\033[1;91m👉 \033[0m[\033[1;32m5\033[0m] Crack From friend')
-                print('\033[1;91m👉 \033[0m[\033[1;32m6\033[0m] Results check')
-                print('\033[1;91m┗\033[0m\n')
+                print('\033[1;91m👉 \033[0m[\033[1;32m4\033[0m] CRACK FROM GROUP ')
+                print('\033[1;91m👉 \033[0m[\033[1;32m5\033[0m] CRACK FROM FRIENDS')
+                print('\033[1;91m👉 \033[0m[\033[1;32m6\033[0m] RESULTS CHECKS')
+                print('\033[1;91m\033[0m\n')
                 print()
                 tanya = input('➛ ')
                 if tanya =="":
